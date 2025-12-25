@@ -1,0 +1,22 @@
+{
+  "name": "nodejsday6",
+  "version": "1.0.0",
+  "description": "Front Desk Application",
+  "main": "index.js",
+  "scripts": {
+    "script":"node index js",
+    "dev" : "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mugeshsamrajr/nodejsday6.git"
+  },
+  "keywords": [],
+  "author": "SAM",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/mugeshsamrajr/nodejsday6/issues"
+  },
+  "homepage": "https://github.com/mugeshsamrajr/nodejsday6#readme"
+}
