@@ -4,7 +4,7 @@ import dotenv from "dotenv"
 
 dotenv.config();
 
-const authMiddleware = async (req, res, next) => {
+export const authMiddleware = async (req, res, next) => {
   // const token = req.header("Authorization"); // Method 1
   const token = req.headers.authorization?.split(" ")[1]; // Method 2
   if (!token) {
@@ -24,3 +24,16 @@ const authMiddleware = async (req, res, next) => {
 }
 
 export default authMiddleware;
+
+// Middleware for admin functionalites
+
+export const adminMiddleware = (req, res, next) => {
+  if (req.user && req.user.role === "Admin") {
+    next();
+  }
+  else {
+    res.status(402).json({
+      message:"Access Denied, only Admin able to view"
+    })
+  }
+}
